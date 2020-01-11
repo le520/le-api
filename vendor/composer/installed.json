@@ -744,6 +744,45 @@
         ]
     },
     {
+        "name": "topthink/think-template",
+        "version": "v2.0.7",
+        "version_normalized": "2.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/top-think/think-template.git",
+            "reference": "e98bdbb4a4c94b442f17dfceba81e0134d4fbd19"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/top-think/think-template/zipball/e98bdbb4a4c94b442f17dfceba81e0134d4fbd19",
+            "reference": "e98bdbb4a4c94b442f17dfceba81e0134d4fbd19",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1.0",
+            "psr/simple-cache": "^1.0"
+        },
+        "time": "2019-09-20T15:31:04+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "think\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "liu21st",
+                "email": "liu21st@gmail.com"
+            }
+        ],
+        "description": "the php template engine"
+    },
+    {
         "name": "topthink/think-trace",
         "version": "v1.2",
         "version_normalized": "1.2.0.0",
@@ -791,5 +830,44 @@
             }
         ],
         "description": "thinkphp debug trace"
+    },
+    {
+        "name": "topthink/think-view",
+        "version": "v1.0.13",
+        "version_normalized": "1.0.13.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/top-think/think-view.git",
+            "reference": "90803b73f781db5d42619082c4597afc58b2d4c5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/top-think/think-view/zipball/90803b73f781db5d42619082c4597afc58b2d4c5",
+            "reference": "90803b73f781db5d42619082c4597afc58b2d4c5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1.0",
+            "topthink/think-template": "^2.0"
+        },
+        "time": "2019-10-07T12:23:10+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "think\\view\\driver\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "liu21st",
+                "email": "liu21st@gmail.com"
+            }
+        ],
+        "description": "thinkphp template driver"
     }
 ]

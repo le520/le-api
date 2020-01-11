@@ -1,4 +1,5 @@
 <?php
+
 namespace app\controller;
 
 use app\BaseController;
@@ -16,9 +17,9 @@ class VimTips extends BaseController
             $num++;
         }
         fclose($fp);
-        $num = mt_rand(0,$num-2);
-        $reData['status']="success";
-        $reData['data']=$data[$num];
-        return json_encode($reData,JSON_UNESCAPED_UNICODE);
+        $num = mt_rand(0, $num - 2);
+        $reData['status'] = "success";
+        $reData['data'] = $data[$num];
+        return json_encode($reData, JSON_UNESCAPED_UNICODE);
     }
 }
