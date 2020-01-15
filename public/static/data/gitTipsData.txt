@@ -1,0 +1,39 @@
+git init 在本地新建一个repo,进入一个项目目录
+git clone [url] 获取一个url对应的远程Git repo, 创建一个local copy
+git status 查询repo的状态
+git add . 递归地添加当前工作目录中的所有文件
+git diff 此命令比较工作目录中当前文件和暂存区域快照之间的差异
+git commit 提交已经被add进来的改动
+git commit -m “the commit message"
+git commit -a 会先把所有已经track的文件的改动add进来,然后提交(有点像svn的一次提交,不用先暂存)
+git commit --amend 增补提交. 会使用与当前提交节点相同的父节点进行一次新的提交,旧的提交会被取消
+git reset undo changes and commits
+git revert 反转撤销提交.只要把出错的提交(commit)的名字(reference)作为参数传给命令就可以了
+git rm file: 从staging区移除文件,同时也移除出工作目录
+git rm --cached: 从staging区移除文件,但留在工作目录中
+git rm --cached从功能上等同于git reset HEAD,清除了缓存区,但不动工作目录树
+git clean 从工作目录中移除没有track的文件
+git clean -df: -d表示同时移除目录,-f表示force
+git stash 把当前的改动压入一个栈.
+git branch可以用来列出分支,创建分支和删除分支
+git branch -v可以看见每一个分支的最后一次提交
+git branch: 列出本地所有分支,当前分支会被星号标示出
+git branch (branchname): 创建一个新的分支(当你用这种方式创建分支的时候,分支是基于你的上一次提交建立的)
+git branch -d (branchname): 删除一个分支
+git checkout (branchname) 切换到一个分支
+git checkout -b (branchname): 创建并切换到新的分支
+git checkout --<filename> 此命令会使用HEAD中的最新内容替换掉你的工作目录中的文件
+git merge 把一个分支merge进当前的分支.
+git tag 会在一个提交上建立永久性的书签
+git remote: 列出remote aliases.
+git remote -v:可以看见每一个别名对应的实际url.
+git remote add [alias] [url]: 添加一个新的remote repo.
+git remote rm [alias]: 删除一个存在的remote alias.
+git remote rename [old-alias] [new-alias]: 重命名.
+git remote set-url [alias] [url]:更新url. 可以加上—push和fetch参数,为同一个别名set不同的存取地址.
+git pull 拉取远程分支
+git rebase 合并分支。rebase不会产生合并的提交
+git rebase --continue就会继续打余下的补丁.
+git rebase --abort将会终止rebase,当前分支将会回到rebase之前的状态.
+git push [alias] [branch] 将会把当前分支merge到alias上的[branch]分支.
+git reflog 是对reflog进行管理的命令,reflog是git用来记录引用变化的一种机制

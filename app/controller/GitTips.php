@@ -1,14 +1,13 @@
 <?php
 
+
 namespace app\controller;
 
 use app\BaseController;
-
-class VimTips extends BaseController
+class GitTips extends BaseController
 {
-    public function index()
-    {
-        $file_name = "static/data/vimTipsData.txt";
+    public function index(){
+        $file_name = "static/data/gitTipsData.txt";
         $fp = fopen($file_name, 'r');
         $num = 0;
         $data = array();
